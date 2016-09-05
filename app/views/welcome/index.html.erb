@@ -1,0 +1,8 @@
+<h1 class="">Welcome! Please take time to sign the Guestbook!</h1>
+
+<% if @comments.length > 0 %>
+	<% render 'comments/index' %>
+<% else %>
+	<p>No comments to display.</p>
+	<%= link_to 'Sign Guestbook', 'comments/new' %>
+<% end %>
