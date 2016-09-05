@@ -2,14 +2,13 @@
 
 <% @comments.each do |comment| %>
 	<ul>
-		<li><%= comment.commenter %> signed the guestbook <%= ((comment.created_at-Time.now)/86400).round %> ago:</li>
-		<li><%= @comment_string %></li>
+		<li><% comment.commenter %> signed the guestbook <% ((comment.created_at-Time.now)/86400).round %> ago:
+		</li>
 			<ul>
-				<li><%= comment.body %></li>
+				<li><% comment.body %></li>
 			</ul>
 	</ul>
 <% end %>
-
 
 <h3>New Comment</h3>
 

@@ -1,5 +1,5 @@
 
-<%= form_for(@comment) do |c| %>
+<% form_for(@comment) do |c| %>
   <% if @comment.errors.any? %>
     <div id="">
       <h2>
@@ -13,25 +13,16 @@
     </div>
   <% end %>
 
-  <p>
-		<%= c.label "Name" %><br>
-		<%= c.text_field :commenter_p %>
-	</p>
+  <div class="">
+    <p>
+  		<% c.label "Name" %><br>
+  		<% c.text_field :commenter_p %>
+  	</p>
 
-	<p>
-		<%= c.label "Title" %><br>
-		<%= c.text_area :body_p %>
-	</p>
-
-	<p>
-		<%= c.submit "Save Message" %>
-	</p>
-
-<% end %>
-<% end %>
-<% form_tag(action: '', method:'post') %>
-  <% text_field "Name", :commenter_p %>
-  <% text_field "Subject Heading", :title_p %>
-  <% text_field "Message Text", :body_p %>
-  <% submit_tag "Save Message" %>
+  	<p>
+  		<% c.label "Title" %><br>
+  		<% c.text_area :body_p %><br>
+  		<% c.submit "Save Message" %>
+  	</p>
+  </div>
 <% end %>
